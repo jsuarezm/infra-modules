@@ -1,7 +1,7 @@
-resource "aws_internet_gateway" "this" {
-  vpc_id = aws_vpc.this.id
+module "igw" {
+  source = "../igw"
 
-  tags = {
-    Name = "${var.env}-igw"
-  }
+  vpcid = aws_vpc.this.id
+  env = var.env
+  
 }

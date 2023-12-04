@@ -14,5 +14,5 @@ resource "aws_nat_gateway" "this" {
     Name = "${var.env}-nat"
   }
 
-  depends_on = [aws_internet_gateway.this]
+  depends_on = [module.igw]
 }
