@@ -16,7 +16,7 @@ resource "aws_route_table" "public" {
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = module.igw
+    gateway_id = module.igw.igw
   }
 
   tags = {
